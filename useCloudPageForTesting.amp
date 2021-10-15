@@ -1,0 +1,37 @@
+<script runat="server">
+Platform.Load("Core", "1.1.1");
+
+//Create Data Extension
+var prox = new Script.WSProxy();
+
+var guid = Platform.Function.GUID();
+var name = "Duc test create DE - " + guid;
+
+var de = {
+    Name: name,
+    CustomerKey: guid,
+    Description: "Duc trying to create DE from WSProxy",
+    Fields : [{
+        FieldType: "Text",
+        Name: "ID",
+        MaxLength: 50,
+        IsPrimaryKey: true,
+        IsNillable: false,
+        IsRequired: true
+    },
+    {
+        FieldType: "Number",
+        Name: "Mobiphone",
+        IsNillable: false,
+        IsRequired: false
+    }],
+    CategoryID: 399129
+}
+
+try{
+    var res = prox.createItem("DataExtension", de);
+}
+catch(ex){
+    Write("Error Message: " + Stringify(ex));
+}
+</script>
