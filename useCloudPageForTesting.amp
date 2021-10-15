@@ -2,20 +2,15 @@
 Platform.Load("Core", "1.1.1");
 var prox = new Script.Util.WSProxy();
 
-// Create filter
+/* Create filter
 var filter = {
     LeftOperand: {
         Property: "DataExtension.CustomerKey",
         SimpleOperator: "equals",
         Value: "9e796644-862c-44f5-8480-c418008a296b"
-    },
-    LogicalOperator: "AND",
-    RightOperand: {
-        Property: "Name",
-        SimpleOperator: "equals",
-        Value: "Duc test create DE - 9e796644-862c-44f5-8480-c418008a296b"
     }
-}
+    }
+*/    
 
 // Update field in a DE
 var fields = [{
@@ -38,7 +33,7 @@ var fields = [{
     }]
 
 try{
-var req = prox.retrieve("DataExtensionField", ["ObjectID"], filter);
+// var req = prox.retrieve("DataExtensionField", ["ObjectID"], filter);
 var res = prox.updateItem("DataExtension", {
     "CustomerKey": "9e796644-862c-44f5-8480-c418008a296b",
     "Fields": fields
