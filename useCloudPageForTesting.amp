@@ -33,13 +33,14 @@ var fields = [
     {
         "FieldType": "Text",
         "Name": "Remark",
+        "MaxLength": 50,
         "DefaultValue": "Test"
     }]
 
 try{
 // var req = prox.retrieve("DataExtensionField", ["ObjectID"], filter);
 var res = prox.updateItem("DataExtension", {
-    "ObjectID": "9e796644-862c-44f5-8480-c418008a296b",
+    "CustomerKey": "9e796644-862c-44f5-8480-c418008a296b",
     "Fields": fields
 });
 } catch(ex) {
