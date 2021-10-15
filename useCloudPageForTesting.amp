@@ -1,6 +1,7 @@
 <script runat="server">
 Platform.Load("Core", "1.1.1");
 
+try{
 //Create Data Extension
 var prox = new Script.WSProxy();
 
@@ -27,7 +28,7 @@ var de = {
     CategoryID: 399129
 }
 
-try{
+
     var res = prox.createItem("DataExtension", de);
 }
 catch(ex){
