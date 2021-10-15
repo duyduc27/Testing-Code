@@ -10,14 +10,18 @@ var filter = {
         Value: "9e796644-862c-44f5-8480-c418008a296b"
     }
     }
-*/    
+*/
 
-// Update field in a DE
-var fields = [{
+/*
+{
         "Name": "Name",
         "MaxLength": 100,
         "DefaultValue": "Duc"
     },
+*/
+
+// Update field in a DE
+var fields = [
     {
         "FieldType": "Phone",
         "Name": "Mobiphone"
