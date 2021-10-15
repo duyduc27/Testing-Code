@@ -20,10 +20,9 @@ var de = {
         IsRequired: true
     },
     {
-        FieldType: "Number",
-        Name: "Mobiphone",
-        IsNillable: false,
-        IsRequired: false
+        FieldType: "Text",
+        Name: "Name",
+        MaxLength: 200
     }],
     CategoryID: 399129
 }
