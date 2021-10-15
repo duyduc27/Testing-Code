@@ -41,7 +41,7 @@ try{
 var req = prox.retrieve("DataExtensionField", ["ObjectID"], filter);
 var res = prox.updateItem("DataExtension", {
     "CustomerKey": "9e796644-862c-44f5-8480-c418008a296b",
-    "Fields": Fields
+    "Fields": fields
 });
 } catch(ex) {
     Write("Error msg: " + Stringify(ex));
