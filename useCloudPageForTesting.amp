@@ -1,9 +1,8 @@
 <script runat="server">
 Platform.Load("Core", "1.1.1");
 
-try{
 //Create Data Extension
-var prox = new Script.WSProxy();
+var prox = new Script.Util.WSProxy();
 
 var guid = Platform.Function.GUID();
 var name = "Duc test create DE - " + guid;
@@ -29,6 +28,7 @@ var de = {
 }
 
 
+try{
     var res = prox.createItem("DataExtension", de);
 }
 catch(ex){
